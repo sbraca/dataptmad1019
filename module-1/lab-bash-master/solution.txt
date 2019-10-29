@@ -1,0 +1,259 @@
+1)Print Hello World in console.
+Stefanias-MacBook-Air:lab-bash-master Stefania$ echo "Hello World"
+Hello World
+
+2)Create a new folder named new_dir.
+Stefanias-MacBook-Air:lab-bash-master Stefania$ mkdir new_dir
+Stefanias-MacBook-Air:lab-bash-master Stefania$ ls
+README.md	inputs		lorem-copy	outputs
+exercices	lorem		new_dir		solution.txt
+
+3)Delete new_dir folder.
+Stefanias-MacBook-Air:lab-bash-master Stefania$ rmdir new_dir
+Stefanias-MacBook-Air:lab-bash-master Stefania$ ls
+README.md	inputs		lorem-copy	solution.txt
+exercices	lorem		outputs
+Stefanias-MacBook-Air:lab-bash-master Stefania$ 
+
+4)Make a copy of sed.txt (located in the lorem folder) to lorem-copy.
+Stefanias-MacBook-Air:lab-bash-master Stefania$ cp lorem/sed.txt lorem-copy
+Stefanias-MacBook-Air:lab-bash-master Stefania$ ls
+README.md	inputs		lorem-copy	outputs
+exercices	lorem		new_dir		solution.txt
+Stefanias-MacBook-Air:lab-bash-master Stefania$ cd lorem-copy
+Stefanias-MacBook-Air:lorem-copy Stefania$ ls
+sed.txt
+
+5)Copy the rest of the files located in lorem to lorem-copy using only one code line (tip: use ;).
+Stefanias-MacBook-Air:lab-bash-master Stefania$ cp lorem/at.txt lorem/lorem.txt lorem-copy
+Stefanias-MacBook-Air:lab-bash-master Stefania$ ls
+README.md	inputs		lorem-copy	solution.txt
+exercices	lorem		outputs
+Stefanias-MacBook-Air:lab-bash-master Stefania$ cd lorem-copy
+Stefanias-MacBook-Air:lorem-copy Stefania$ ls
+at.txt		lorem.txt	sed.txt
+Stefanias-MacBook-Air:lorem-copy Stefania$ 
+
+6)Locate at lorem folder and show sed.txt content.
+Stefanias-MacBook-Air:lab-bash-master Stefania$ pwd
+/Users/Stefania/Ironhack/dataptmad1019/module-1/lab-bash-master
+Stefanias-MacBook-Air:lab-bash-master Stefania$ ls
+README.md	inputs		lorem-copy	solution.txt
+exercices	lorem		outputs
+Stefanias-MacBook-Air:lab-bash-master Stefania$ cd lorem
+Stefanias-MacBook-Air:lorem Stefania$ pwd
+/Users/Stefania/Ironhack/dataptmad1019/module-1/lab-bash-master/lorem
+Stefanias-MacBook-Air:lorem Stefania$ ls
+at.txt		lorem.txt	sed.txt
+Stefanias-MacBook-Air:lorem Stefania$ cat sed.txt
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
+sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
+Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
+sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, 
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, 
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Stefanias-MacBook-Air:lorem Stefania$ 
+
+7)Locate at lorem folder and show at.txt and lorem.txt content.
+Stefanias-MacBook-Air:lorem Stefania$ cat at.txt lorem.txt
+At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum 
+deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non 
+provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. 
+Et harum quidem rerum facilis est et expedita distinctio. 
+Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod 
+maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. 
+Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet 
+ut et voluptates repudiandae sint et molestiae non recusandae. 
+Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores 
+alias consequatur aut perferendis doloribus asperiores repellatLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Stefanias-MacBook-Air:lorem Stefania$ 
+
+8)Locate at lorem-copy folder and show the first three lines of sed.txt.
+Stefanias-MacBook-Air:lorem-copy Stefania$ head -n3 sed.txt
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
+Stefanias-MacBook-Air:lorem-copy Stefania$ 
+
+9)Locate at lorem-copy folder and show the last three lines of sed.txt.
+Stefanias-MacBook-Air:lorem-copy Stefania$ tail -n3 sed.txt
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, 
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, 
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Stefanias-MacBook-Air:lorem-copy Stefania$ 
+
+10)Add Homo homini lupus. at the end of sed.txt located at lorem-copy. 
+Stefanias-MacBook-Air:lab-bash-master Stefania$ cd lorem-copy
+Stefanias-MacBook-Air:lorem-copy Stefania$ ls
+at.txt		lorem.txt	sed.txt
+Stefanias-MacBook-Air:lorem-copy Stefania$ nano sed.txt
+
+Stefanias-MacBook-Air:lorem-copy Stefania$ echo 'Homo homini lupus.'>> sed.txt
+Stefanias-MacBook-Air:lorem-copy Stefania$ tail -n3 sed.txt
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, 
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? 
+Homo homini lupus.
+Stefanias-MacBook-Air:lorem-copy Stefania$ 
+
+
+11)Locate at lorem-copy folder and show the last three lines of sed.txt. Now you should see Homo homini lupus..
+Stefanias-MacBook-Air:lorem-copy Stefania$ tail -n3 sed.txt
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, 
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, 
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Homo homini lupus.
+
+12)
+
+13)Find the active user of the system.
+Stefanias-MacBook-Air:lab-bash-master Stefania$ whoami
+Stefania
+Stefanias-MacBook-Air:lab-bash-master Stefania$ 
+
+14)Find out where are you located within the system.
+Stefanias-MacBook-Air:lab-bash-master Stefania$ pwd
+/Users/Stefania/Ironhack/dataptmad1019/module-1/lab-bash-master
+
+15)List all .txt files located at lorem.
+Stefanias-MacBook-Air:lab-bash-master Stefania$ cd lorem
+Stefanias-MacBook-Air:lorem Stefania$ ls *.txt
+at.txt		lorem.txt	sed.txt
+
+
+16)Count the number of lines in sed.txt located at lorem.
+Stefanias-MacBook-Air:lorem Stefania$ wc -l sed.txt
+       8 sed.txt
+
+17)Count the number of files which name starts with lorem located at the whole lab directory.
+Stefanias-MacBook-Air:lab-bash-master Stefania$ find . -type f -name "lorem.*" | wc -l
+       2
+
+18)Find every appearance of et in at.txt located at lorem.
+Stefanias-MacBook-Air:lorem Stefania$ grep -rHino "et" at.txt
+at.txt:1:et
+et
+at.txt:2:et
+at.txt:3:et
+at.txt:4:Et
+et
+at.txt:7:et
+et
+at.txt:8:et
+et
+at.txt:9:et
+Stefanias-MacBook-Air:lorem Stefania$ cat at.txt
+At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum 
+deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non 
+provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. 
+Et harum quidem rerum facilis est et expedita distinctio. 
+Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod 
+maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. 
+Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet 
+ut et voluptates repudiandae sint et molestiae non recusandae. 
+Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores 
+alias consequatur aut perferendis doloribus asperiores repellatStefanias-MacBook-SSSSSSSStSStSteStefSteSSSSStStStSteSStefanias-MacBook-Air:lorem Stefania$ 
+
+19)Find every appearance of the string et located at the whole lab directory.
+Stefanias-MacBook-Air:module-1 Stefania$ grep -rHino "et" /Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/lorem-copy/at.txt:1:et
+et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/lorem-copy/at.txt:2:et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/lorem-copy/at.txt:3:et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/lorem-copy/at.txt:4:Et
+et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/lorem-copy/at.txt:7:et
+et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/lorem-copy/at.txt:8:et
+et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/lorem-copy/at.txt:9:et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/lorem-copy/lorem.txt:1:et
+et
+et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/lorem-copy/sed.txt:2:et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/lorem-copy/sed.txt:5:et
+et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/lorem-copy/sed.txt:6:et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/lorem/at.txt:1:et
+et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/lorem/at.txt:2:et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/lorem/at.txt:3:et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/lorem/at.txt:4:Et
+et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/lorem/at.txt:7:et
+et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/lorem/at.txt:8:et
+et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/lorem/at.txt:9:et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/lorem/lorem.txt:1:et
+et
+et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/lorem/sed.txt:2:et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/lorem/sed.txt:5:et
+et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/lorem/sed.txt:6:et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/README.md:5:et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/README.md:10:et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/README.md:30:et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/README.md:48:et
+ET
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/README.md:60:et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/README.md:62:et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/README.md:64:et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/README.md:71:et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/README.md:101:et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/solution.txt:11:et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/solution.txt:50:et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/solution.txt:53:et
+et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/solution.txt:54:et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/solution.txt:61:et
+et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/solution.txt:62:et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/solution.txt:63:et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/solution.txt:64:Et
+et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/solution.txt:67:et
+et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/solution.txt:68:et
+et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/solution.txt:69:et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/solution.txt:70:et
+et
+et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/solution.txt:78:et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/solution.txt:133:et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/solution.txt:134:et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/solution.txt:135:et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/solution.txt:136:et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/solution.txt:137:et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/solution.txt:138:et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/solution.txt:139:Et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/solution.txt:140:et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/solution.txt:141:et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/solution.txt:142:et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/solution.txt:143:et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/solution.txt:144:et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/solution.txt:145:et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/solution.txt:147:et
+et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/solution.txt:148:et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/solution.txt:149:et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/solution.txt:150:Et
+et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/solution.txt:153:et
+et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/solution.txt:154:et
+et
+/Users/Stefania/ironhack/dataptmad1019/module-1/lab-bash-master/solution.txt:155:et
+
+BASH FILES
+Stefanias-MacBook-Air:lab-bash-master Stefania$ nano list_files.sh
+Stefanias-MacBook-Air:lab-bash-master Stefania$ bash list_files.sh
+README.md	inputs		lorem		outputs
+exercices	list_files.sh	lorem-copy	solution.txt
+Stefanias-MacBook-Air:lab-bash-master Stefania$ name=Stefania
+Stefanias-MacBook-Air:lab-bash-master Stefania$ echo $name
+Stefania
+Stefanias-MacBook-Air:lab-bash-master Stefania$ 
