@@ -1,0 +1,126 @@
+1)Print Hello World in console.
+(jupyter_env) MacBook-Pro-de-Stefania:lab-bash-master stefaniabraca$ echo "Hello World"
+Hello World
+
+2)Create a new folder named new_dir.
+(jupyter_env) MacBook-Pro-de-Stefania:lab-bash-master stefaniabraca$ mkdir new_dir
+(jupyter_env) MacBook-Pro-de-Stefania:lab-bash-master stefaniabraca$ ls
+README.md	inputs		lorem		new_dir		solution.txt
+exercices	list_files.sh	lorem-copy	outputs
+
+3)Delete new_dir folder.
+(jupyter_env) MacBook-Pro-de-Stefania:lab-bash-master stefaniabraca$ rmdir new_dir
+(jupyter_env) MacBook-Pro-de-Stefania:lab-bash-master stefaniabraca$ ls
+README.md	inputs		lorem		outputs
+exercices	list_files.sh	lorem-copy	solution.txt
+
+4)Make a copy of sed.txt (located in the lorem folder) to lorem-copy
+(jupyter_env) MacBook-Pro-de-Stefania:lab-bash-master stefaniabraca$ cp lorem/sed.txt lorem-copy
+
+5) Copy the rest of the files located in lorem to lorem-copy using only one code line (tip: use ;).
+(jupyter_env) MacBook-Pro-de-Stefania:lab-bash-master stefaniabraca$ cp lorem/at.txt lorem/lorem.txt lorem-copy
+(jupyter_env) MacBook-Pro-de-Stefania:lab-bash-master stefaniabraca$ cd lorem-copy/
+(jupyter_env) MacBook-Pro-de-Stefania:lorem-copy stefaniabraca$ ls
+at.txt		lorem.txt	sed.txt
+
+6)Locate at lorem folder and show sed.txt content.
+(jupyter_env) MacBook-Pro-de-Stefania:lab-bash-master stefaniabraca$ cd lorem
+(jupyter_env) MacBook-Pro-de-Stefania:lorem stefaniabraca$ ls
+at.txt		lorem.txt	sed.txt
+(jupyter_env) MacBook-Pro-de-Stefania:lorem stefaniabraca$ cat sed.txt
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
+sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
+Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
+sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, 
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, 
+
+7)Locate at lorem folder and show at.txt and lorem.txt content.
+ok-Pro-de-Stefania:lorem stefaniabraca$ cat at.txt lorem.txt
+At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum 
+deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non 
+provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. 
+Et harum quidem rerum facilis est et expedita distinctio. 
+Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod 
+maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. 
+Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet 
+ut et voluptates repudiandae sint et molestiae non recusandae. 
+Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores 
+alias consequatur aut perferendis doloribus asperiores repellatLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.(jupyter_env) MacBook-Pro-de-Stefania:lorem stefaniabraca$ 
+
+8)Locate at lorem-copy folder and show the first three lines of sed.txt.
+(jupyter_env) MacBook-Pro-de-Stefania:lorem stefaniabraca$ head -n3 sed.txt
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+
+9)Locate at lorem-copy folder and show the last three lines of sed.txt.
+(jupyter_env) MacBook-Pro-de-Stefania:lorem stefaniabraca$ tail -n3 sed.txt
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, 
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, 
+
+10)Add Homo homini lupus. at the end of sed.txt located at lorem-copy.
+(jupyter_env) MacBook-Pro-de-Stefania:lab-bash-master stefaniabraca$ cd lorem-copy
+(jupyter_env) MacBook-Pro-de-Stefania:lorem-copy stefaniabraca$ echo 'Homo homini lupus.'>> sed.txt
+
+11)Locate at lorem-copy folder and show the last three lines of sed.txt. 
+(jupyter_env) MacBook-Pro-de-Stefania:lorem-copy stefaniabraca$ tail -n3 sed.txt
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, 
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, 
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus.
+
+12)Change every et to ET in at.txt located at lorem-copy (tip: use sed).
+
+13)Find the active user of the system.
+
+(jupyter_env) MacBook-Pro-de-Stefania:lorem-copy stefaniabraca$ whoami
+stefaniabraca
+
+14)Find out where are you located within the system.
+ (jupyter_env) MacBook-Pro-de-Stefania:lorem-copy stefaniabraca$ pwd
+/Users/stefaniabraca/Desktop/ironhack/dataptmad1019/module-1/lab-bash-master/lorem-copy
+
+15) List all .txt files located at lorem.
+
+(jupyter_env) MacBook-Pro-de-Stefania:lab-bash-master stefaniabraca$ cd lorem
+(jupyter_env) MacBook-Pro-de-Stefania:lorem stefaniabraca$ ls *.txt
+at.txt		lorem.txt	sed.txt
+(jupyter_env) MacBook-Pro-de-Stefania:lorem stefaniabraca$ 
+
+16) Count the number of lines in sed.txt located at lorem.
+(jupyter_env) MacBook-Pro-de-Stefania:lorem stefaniabraca$ wc -l sed.txt
+       8 sed.txt
+
+17) Count the number of files which name starts with lorem located at the whole lab directory.
+(jupyter_env) MacBook-Pro-de-Stefania:lorem stefaniabraca$ find . -type f -name 'lorem*' | wc -l
+       1
+
+18) Count the number of times et appears in at.txt located at lorem.
+(jupyter_env) MacBook-Pro-de-Stefania:lorem stefaniabraca$ grep -rHino "et" at.txt
+at.txt:1:et
+et
+at.txt:2:et
+at.txt:3:et
+at.txt:4:Et
+et
+at.txt:7:et
+et
+at.txt:8:et
+et
+at.txt:9:et
+
+19)Count the number of times the string et appears in at.txt located at lorem.
+(jupyter_env) MacBook-Pro-de-Stefania:lorem stefaniabraca$ grep -w 'et' at.txt|WC -l
+       6
+
+20)Count the number of times the string et appears in every file located at lorem-copy.
+
+(jupyter_env) MacBook-Pro-de-Stefania:lab-bash-master stefaniabraca$ grep -w 'et' lorem-copy/* |WC -l
+       9
+
+
